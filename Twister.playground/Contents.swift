@@ -36,6 +36,7 @@ sceneView.showsStatistics = true
 
 // Geometry - Metal will translate the OpenGL code.
 // The uniform "twistFactor" must be assigned a value.
+// Its value can't be assigned using the setValue:forKey method.
 let geometryShaderModifier =
     "uniform float twistFactor = 1.0;\n" +
     "mat4 rotationAroundX(float angle) {\n" +
