@@ -50,7 +50,7 @@ let geometryShaderModifier =
     "vec4 twistedNormal = vec4(_geometry.normal, 1.0) * rotationMatrix;\n" +
     "_geometry.normal   = twistedNormal.xyz;\n"
 
-// Attached the shader modifier to the torus' geometry
+// Attach the shader modifier to the torus' geometry
 torus.shaderModifiers = [.geometry : geometryShaderModifier]
 
 // The uniform "twistFactor" must be assigned a value.
@@ -60,7 +60,7 @@ torus.setValue(5.0, forKey: "twistFactor")
 // Check: Is the keyPath "twistFactor" KVC?
 // Yes, SceneKit binds values of shader variables using KVO.
 // Custom uniforms can be animated using explicit animations.
-// There is no animation if the key path is "twistFactor".
+// There is no animation if the key path in the statement below is "twistFactor".
 // Ref. Animating SceneKit Content - Explicitly Create an Animation
 let twistAnimation = CABasicAnimation(keyPath: "geometry.twistFactor")
 twistAnimation.fromValue = NSNumber(value: 5.0)
