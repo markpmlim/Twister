@@ -7,3 +7,5 @@ The original code does not work correctly. There is no animation at all; a stati
 To convert the geometry shader modifier code from OpenGL to MSL, refer to the answer given at
 
 https://www.oipapio.com/question-16958817
+
+Requirements: XCode 10.x and macOS 10.14.x 
